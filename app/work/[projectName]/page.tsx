@@ -33,8 +33,8 @@ export function generateMetadata({
 
 const navItems = [
   { name: "Home", link: "/", icon: <House /> },
-  { name: "Work", link: "/#work", icon: <BriefcaseBusiness /> },
-  { name: "About", link: "/#about", icon: <UserRound /> },
+  { name: "About", link: "/#about", icon: <BriefcaseBusiness /> },
+  { name: "Work", link: "/#work", icon: <UserRound /> },
   { name: "Contact", link: "/#contact", icon: <ContactIcon /> },
 ];
 

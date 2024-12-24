@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { BackgroundBeams } from "./ui/BackgroundBeams";
-import ShinyButton from "./ui/ShinyButton";
+//import ShinyButton from "./ui/ShinyButton";
 
 const Footer = () => {
   return (
@@ -11,19 +11,15 @@ const Footer = () => {
       <div>
         <div className="space-y-8 p-10">
           <h1 className="text-5xl font-bold max-w-2xl leading-[110%] relative z-10">
-            Like what you see? Reach out{" "}
+            Reach out{" "}
             <Link
               href="mailto:acozy03@gmail.com"
               className="text-primary hover:text-primary/80 border-b-2 border-primary hover:border-primary/80 transition-colors duration-200"
             >
               via email
             </Link>{" "}
-            to collaborate!
+            to follow up and contact me!
           </h1>
-
-          <ShinyButton>
-            <Link href="acozy03@gmail.com">Schedule call</Link>
-          </ShinyButton>
         </div>
 
         <div className="mt-16 p-10 border-t border-dark-200 dark:border-white/10 flex flex-col md:flex-row justify-between gap-10 md:gap-0">
@@ -43,10 +39,10 @@ const Footer = () => {
                 <Link href="/">Home</Link>
               </li>
               <li className="text-dark-200/60 hover:text-dark-200 dark:text-white/50 dark:hover:text-white">
-                <Link href="#work">Work</Link>
+                <Link href="#about">About</Link>
               </li>
               <li className="text-dark-200/60 hover:text-dark-200 dark:text-white/50 dark:hover:text-white">
-                <Link href="#about">About</Link>
+                <Link href="#work">Work</Link>
               </li>
               <li className="text-dark-200/60 hover:text-dark-200 dark:text-white/50 dark:hover:text-white">
                 <Link href="#contact">Contact</Link>
