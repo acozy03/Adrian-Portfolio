@@ -21,7 +21,7 @@ const HeroSection = () => {
           <p className="uppercase font-bold text-sm tracking-widest">
             Based In Orlando, Fl
           </p>
-          {/* <h1 className="text-[40px] md:text-6xl lg:text-7xl font-bold text-center max-w-5xl leading-tight tracking-wide">
+          {/* <h1 claame="text-[40px] md:text-6xl lg:text-7xl font-bold text-center max-w-5xl leading-tight tracking-wide">
             Quality Design &{" "}
             <span className="text-primary">Web Development</span> Synergy
           </h1> */}
