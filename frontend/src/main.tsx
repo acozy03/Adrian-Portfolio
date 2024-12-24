@@ -1,17 +1,30 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { createRoot } from 'react-dom/client'
-import { ThemeProvider } from '@mui/material/styles'
-import CssBaseline from '@mui/material/CssBaseline'
-import theme from './styles/theme'
-import Home from './app/page'
+import { ThemeProvider, CssBaseline } from '@mui/material'
+import getTheme from './styles/theme'
+import Home from './sections/portfolio'
+
+export const ColorModeContext = React.createContext({
+  toggleColorMode: () => {},
+  mode: 'light',
+})
 
 function Main() {
+  const [mode, setMode] = useState<'light' | 'dark'>('light')
+  const theme = getTheme(mode)
+
+  const toggleColorMode = () => {
+    setMode((prevMode) => (prevMode === 'light' ? 'dark' : 'light'))
+  }
+
   return (
     <React.StrictMode>
-      <ThemeProvider theme={theme}>
-        <CssBaseline />
-        <Home />
-      </ThemeProvider>
+      <ColorModeContext.Provider value={{ toggleColorMode, mode }}>
+        <ThemeProvider theme={theme}>
+          <CssBaseline />
+          <Home />
+        </ThemeProvider>
+      </ColorModeContext.Provider>
     </React.StrictMode>
   )
 }
@@ -23,4 +36,3 @@ if (container) {
 } else {
   console.error('Root element not found')
 }
-
