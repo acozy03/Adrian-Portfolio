@@ -13,7 +13,7 @@ const Footer = () => {
           <h1 className="text-5xl font-bold max-w-2xl leading-[110%] relative z-10">
             Like what you see? Reach out{" "}
             <Link
-              href="acozy03@gmail.com"
+              href="mailto:acozy03@gmail.com"
               className="text-primary hover:text-primary/80 border-b-2 border-primary hover:border-primary/80 transition-colors duration-200"
             >
               via email
