@@ -70,24 +70,3 @@ export const portfolioProjects = [
   },
 ];
 
-export const tooltipItems = [
-  {
-    id: 4,
-    name: "Alex Finn",
-    designation: "Enjoyable experience.",
-    image: "/imgs/avatars/Alex.jpg",
-  },
-];
-
-export const testimonialItems = [
-  {
-    id: 1,
-    stars: 0,
-    name: "",
-    proffesion: "",
-    description:
-      "",
-    image: "/imgs/avatars/Alex.jpg",
-  },
-  
-];
