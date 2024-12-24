@@ -36,16 +36,16 @@ export const techCardsItems = [
     bgColor: "bg-[#F1502F]/20",
   },
   {
-    name: "Supabase",
-    description: "Backend tool",
-    imageUrl: "/imgs/logos/supabase.svg",
+    name: "MongoDB",
+    description: "Database tool",
+    imageUrl: "/imgs/logos/mongodb.svg",
     bgColor: "bg-[#3ECF8E]/20",
   },
   {
-    name: "Appwrite",
-    description: "Backend tool",
-    imageUrl: "/imgs/logos/appwrite.svg",
-    bgColor: "bg-[#F02D65]/20",
+    name: "MySQL",
+    description: "Database tool",
+    imageUrl: "/imgs/logos/mysql.svg",
+    bgColor: "bg-[#6F8FAF]/80",
   },
 ];
 
