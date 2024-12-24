@@ -51,11 +51,11 @@ export const techCardsItems = [
 
 export const portfolioProjects = [
   {
-    id: "trakction",
+    id: "tracktion",
     heading: "Tracktion",
     subheading: "a modern habit trackting website",
     description:
-      "A modern website with all ecommerce functionalities. It includes features like product browsing, shopping cart, user authentication, ordering a product... The application is developed with react + typescript for frontend part, and Supabase as backend.",
+      "A habit tracking app that allows the user to keep track of their progress through streaks... The application is developed with react + typescript for frontend part, and javascript as backend.",
     imageUrl: "/imgs/projects/portfolio-mockup1.png",
     techStack: [
       "TypeScript",
