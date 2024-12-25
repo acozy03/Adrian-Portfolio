@@ -77,7 +77,7 @@ export const portfolioProjects = [
     subheading: "A 2D Platformer Game",
     description:
       "A simple platformer game developed with Unity and C#... introduction to game development and practical coding.",
-    imageUrl: "/imgs/projects/portfolio-mockup1.png",
+    imageUrl: "/imgs/projects/portfolio-mockup2.png",
     techStack: [
       "Unity",
       "C#",
@@ -90,10 +90,10 @@ export const portfolioProjects = [
   {
     id: "C3",
     heading: "C3 UCF Collegiate Cybersecurity Competition Team",
-    subheading: "a modern habit trackting website",
+    subheading: "",
     description:
       "Quality Assurance Leader for the University of Central Florida's C3 Team's official website. The website is for any and all students interested in joining the team, or for any individual just looking to learn more about the orginization.",
-    imageUrl: "/imgs/projects/portfolio-mockup1.png",
+    imageUrl: "/imgs/projects/portfolio-mockup3.png",
     techStack: [
       "TypeScript",
       "React",
