@@ -2,6 +2,7 @@ import "@/app/_styles/globals.css";
 import type { Metadata } from "next";
 import { Raleway } from "next/font/google";
 import { ThemeProvider } from "./_components/ThemeProvider";
+import { Analytics } from '@vercel/analytics/next';
 
 const raleway = Raleway({ subsets: ["latin"] });
 
@@ -32,6 +33,7 @@ export default function RootLayout({
         >
           {children}
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );
