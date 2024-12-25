@@ -64,9 +64,47 @@ export const portfolioProjects = [
       "MUI",
       "TailwindCSS",
       "MongoDB",
+      "Node.js",
+      "Express",
     ],
     liveDemoUrl: "https://habittracktion.xyz/",
     sourceCodeUrl: "https://github.com/jphillips356/digital-ocean-app",
+  },
+
+  {
+    id: "continuum",
+    heading: "Continuum",
+    subheading: "A 2D Platformer Game",
+    description:
+      "A simple platformer game developed with Unity and C#... introduction to game development and practical coding.",
+    imageUrl: "/imgs/projects/portfolio-mockup1.png",
+    techStack: [
+      "Unity",
+      "C#",
+      "Git",
+    ],
+    liveDemoUrl: "https://acozy03.itch.io/continuum",
+    sourceCodeUrl: "https://github.com/Suaremente/Continuum",
+  },
+
+  {
+    id: "C3",
+    heading: "C3 UCF Collegiate Cybersecurity Competition Team",
+    subheading: "a modern habit trackting website",
+    description:
+      "Quality Assurance Leader for the University of Central Florida's C3 Team's official website. The website is for any and all students interested in joining the team, or for any individual just looking to learn more about the orginization.",
+    imageUrl: "/imgs/projects/portfolio-mockup1.png",
+    techStack: [
+      "TypeScript",
+      "React",
+      "Git",
+      "Node.js",
+      "TailwindCSS",
+      "MongoDB",
+      "Express",
+    ],
+    liveDemoUrl: "https://cs.ucf.edu/CyberCompetitionTeam/#/",
+    sourceCodeUrl: "https://github.com/SadieNiBu/UXTeam14",
   },
 ];
 
