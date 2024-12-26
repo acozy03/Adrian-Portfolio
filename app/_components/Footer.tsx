@@ -1,88 +1,162 @@
-import Link from "next/link";
+"use client";
+import React, { useState } from "react";
 import { BackgroundBeams } from "./ui/BackgroundBeams";
-//import ShinyButton from "./ui/ShinyButton";
+import { Linkedin, Mail } from 'lucide-react';
 
 const Footer = () => {
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    subject: "",
+    email: "",
+    message: "",
+  });
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    console.log("Form submitted with data:", formData);
+
+    fetch("/api/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    })
+      .then((response) => {
+        if (response.ok) {
+          alert("Message sent successfully!");
+          setFormData({
+            firstName: "",
+            lastName: "",
+            subject: "",
+            email: "",
+            message: "",
+          });
+        } else {
+          alert("Failed to send message. Please try again.");
+        }
+      })
+      .catch((error) => {
+        console.error("Error submitting form:", error);
+        alert("An error occurred. Please try again.");
+      });
+  };
+
   return (
-    <div
-      className="flex flex-col justify-center antialiased relative border border-dark-300 rounded-xl mb-5"
-      id="contact"
-    >
-      <div>
-        <div className="space-y-8 p-10">
-          <h1 className="text-5xl font-bold max-w-2xl leading-[110%] relative z-10">
-            Reach out{" "}
-            <Link
-              href="mailto:acozy03@gmail.com"
-              className="text-primary hover:text-primary/80 border-b-2 border-primary hover:border-primary/80 transition-colors duration-200"
-            >
-              via email
-            </Link>{" "}
-            to follow up and contact me!
-          </h1>
-        </div>
-
-        <div className="mt-16 p-10 border-t border-dark-200 dark:border-white/10 flex flex-col md:flex-row justify-between gap-10 md:gap-0">
-          <div className="space-y-2.5">
-            <h3 className="text-xl font-bold relative z-10">
-              Adrian Cosentino
-            </h3>
-            <p className="text-dark-200/70 dark:text-stone-200/70 relative z-10">
-              &copy; 2024 | All rights reserved.
-            </p>
-          </div>
-
-          <div className="flex justify-between gap-0 sm:gap-16">
-            <ul className="space-y-2.5 relative z-10 text-sm sm:text-base">
-              <li className="text-base sm:text-lg font-semibold">Navigate</li>
-              <li className="text-dark-200/60 hover:text-dark-200 dark:text-white/50 dark:hover:text-white">
-                <Link href="/">Home</Link>
-              </li>
-              <li className="text-dark-200/60 hover:text-dark-200 dark:text-white/50 dark:hover:text-white">
-                <Link href="#about">About</Link>
-              </li>
-              <li className="text-dark-200/60 hover:text-dark-200 dark:text-white/50 dark:hover:text-white">
-                <Link href="#work">Work</Link>
-              </li>
-              <li className="text-dark-200/60 hover:text-dark-200 dark:text-white/50 dark:hover:text-white">
-                <Link href="#contact">Contact</Link>
-              </li>
-            </ul>
-
-            <ul className="space-y-2.5 relative z-10 text-sm sm:text-base">
-              <li className="text-lg font-semibold">Projects</li>
-              <li className="text-dark-200/60 hover:text-dark-200 dark:text-white/50 dark:hover:text-white">
-                <Link
-                  href="https://github.com/jphillips356/digital-ocean-app"
-                  target="_blank"
-                >
-                  Tracktion
-                </Link>
-              </li>
-            </ul>
-
-            <ul className="space-y-2.5 relative z-10 text-sm sm:text-base">
-              <li className="text-lg font-semibold">Socials</li>
-              <li className="text-dark-200/60 hover:text-dark-200 dark:text-white/50 dark:hover:text-white">
-                <Link
-                  href="https://www.linkedin.com/in/adrian-cosentino-8ba430280/"
-                  target="_blank"
-                >
-                  LinkedIn
-                </Link>
-              </li>
-              <li className="text-dark-200/60 hover:text-dark-200 dark:text-white/50 dark:hover:text-white">
-                <Link href="https://github.com/acozy03" target="_blank">
-                  Github
-                </Link>
-              </li>
-            </ul>
-          </div>
+    <div className="flex flex-col justify-center items-left antialiased relative rounded-xl mb-20 p-10 border border-white/20" id="contact">
+      <div className="flex justify-between items-center mb-10 relative z-10">
+        <h1 className="text-4xl font-bold text-white">Contact Me</h1>
+        <div className="flex space-x-4">
+          <a
+            href="https://www.linkedin.com/in/your-linkedin-profile"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-10 h-10 bg-gray-500/10 rounded-full flex items-center justify-center hover:bg-gray-500/20 transition-colors"
+          >
+            <Linkedin size={20} className="text-gray-500" />
+          </a>
+          <button
+            onClick={() => {
+              navigator.clipboard.writeText('your.email@example.com').then(() => {
+                alert('Email copied to clipboard!');
+              }).catch(err => {
+                console.error('Failed to copy email: ', err);
+              });
+            }}
+            className="w-10 h-10 bg-gray-500/10 rounded-full flex items-center justify-center hover:bg-gray-500/20 transition-colors"
+          >
+            <Mail size={20} className="text-gray-500" />
+          </button>
         </div>
       </div>
-      <BackgroundBeams className="hidden sm:flex" />
+      <form className="grid grid-cols-1 gap-5 w-full relative z-10" onSubmit={handleSubmit}>
+        <div className="grid grid-cols-2 gap-5">
+          <div className="col-span-1 relative">
+            <input
+              type="text"
+              id="firstName"
+              name="firstName"
+              value={formData.firstName}
+              onChange={handleInputChange}
+              placeholder="First Name"
+              required
+              className="w-full px-4 py-2 bg-black/20 backdrop-blur-sm border border-white/20 rounded-lg focus:outline-none focus:border-white/40 peer placeholder-shown:border-white/20 text-white placeholder:text-white/60"
+            />
+          </div>
+          <div className="col-span-1 relative">
+            <input
+              type="text"
+              id="lastName"
+              name="lastName"
+              value={formData.lastName}
+              onChange={handleInputChange}
+              placeholder="Last Name"
+              required
+              className="w-full px-4 py-2 bg-black/20 backdrop-blur-sm border border-white/20 rounded-lg focus:outline-none focus:border-white/40 peer placeholder-shown:border-white/20 text-white placeholder:text-white/60"
+            />
+          </div>
+        </div>
+
+        <div className="grid grid-cols-2 gap-5">
+          <div className="col-span-1 relative">
+            <input
+              type="text"
+              id="subject"
+              name="subject"
+              value={formData.subject}
+              onChange={handleInputChange}
+              placeholder="Subject"
+              required
+              className="w-full px-4 py-2 bg-black/20 backdrop-blur-sm border border-white/20 rounded-lg focus:outline-none focus:border-white/40 peer placeholder-shown:border-white/20 text-white placeholder:text-white/60"
+            />
+          </div>
+          <div className="col-span-1 relative">
+            <input
+              type="email"
+              id="email"
+              name="email"
+              value={formData.email}
+              onChange={handleInputChange}
+              placeholder="Email"
+              required
+              className="w-full px-4 py-2 bg-black/20 backdrop-blur-sm border border-white/20 rounded-lg focus:outline-none focus:border-white/40 peer placeholder-shown:border-white/20 text-white placeholder:text-white/60"
+            />
+          </div>
+        </div>
+
+        <div className="relative">
+          <textarea
+            id="message"
+            name="message"
+            value={formData.message}
+            onChange={handleInputChange}
+            placeholder="Message"
+            rows={5}
+            required
+            className="w-full px-4 py-2 bg-black/20 backdrop-blur-sm border border-white/20 rounded-lg focus:outline-none focus:border-white/40 peer placeholder-shown:border-white/20 text-white placeholder:text-white/60"
+          ></textarea>
+        </div>
+
+        <button
+          type="submit"
+          className="w-full py-3 bg-[#E23E57] text-white font-bold rounded-lg hover:bg-[#E23E57]/90 transition-all"
+        >
+          Send
+        </button>
+      </form>
+      <BackgroundBeams className="absolute inset-0 -z-0" />
     </div>
   );
 };
 
 export default Footer;
+
