@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 const Skills = () => {
   return (
-    <div className="relative z-10 py-16 sm:py-24" id="about">
+    <div className="relative z-10 py-4 sm:py-8" id="about">
       {/* About Me Section */}
       <div className="flex flex-col md:flex-row items-center md:items-start justify-between mb-16">
         <motion.div
@@ -29,7 +29,7 @@ const Skills = () => {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.25 }}
-          className="hidden md:block w-40 h-40 sm:w-48 sm:h-48 rounded-lg overflow-hidden flex-shrink-0 ml-8 relative shadow-lg hover:shadow-2xl transition-shadow duration-300 ease-in-out"
+          className="hidden md:block w-40 h-40 sm:w-48 sm:h-48 rounded-lg overflow-hidden flex-shrink-0 ml-8 relative transition-shadow duration-300 ease-in-out"
         >
           <img
             src="/imgs/portraits/adrian.png" // Replace with your image path
