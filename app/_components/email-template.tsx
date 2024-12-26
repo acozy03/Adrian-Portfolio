@@ -1,13 +1,17 @@
-import * as React from 'react';
+import React from 'react';
 
-interface EmailTemplateProps {
+interface EmailProps {
   firstName: string;
+  lastName: string;
+  subject: string;
+  email: string;
+  message: string;
 }
 
-export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
-  firstName,
-}) => (
+export const EmailTemplate: React.FC<EmailProps> = ({ firstName, lastName, subject, email, message }) => (
   <div>
-    <h1>Welcome, {firstName}!</h1>
+    <h1>{subject}</h1>
+    <p>From: {firstName} {lastName} ({email})</p>
+    <p>{message}</p>
   </div>
 );
