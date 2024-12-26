@@ -19,7 +19,7 @@ const ProjectsSection = () => {
         </ShinyButton>
       </div>
 
-      <div className="grid lg:grid-cols-2 gap-4 mt-4">
+      <div className="grid lg:grid-cols-2 gap-4 mt-8">
         {portfolioProjects.map((project) => (
           <ProjectCard key={project.id} project={project} />
         ))}
