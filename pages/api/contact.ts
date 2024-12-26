@@ -9,7 +9,7 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 export default async (req: NextApiRequest, res: NextApiResponse) => {
   const { firstName, lastName, subject, email, message } = req.body;  
   const { data, error } = await resend.emails.send({
-    from: 'whatever@adriancosentino.com',
+    from: 'adrian@adriancosentino.com',
     to: ['acozy03@gmail.com'], 
     subject: 'Follow up', 
     react: EmailTemplate({ firstName: firstName, lastName: lastName, subject: subject, email: email, message: message }),

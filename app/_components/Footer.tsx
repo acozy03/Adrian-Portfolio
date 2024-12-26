@@ -54,7 +54,7 @@ const Footer = () => {
   return (
     <div className="flex flex-col justify-center items-left antialiased relative rounded-xl mb-20 p-10 border border-white/10" id="contact">
       <div className="flex justify-between items-center mb-10 relative z-10">
-        <h1 className="text-4xl font-bold text-opacity-80 text-white">Contact Me (in progress rn, does not work) </h1>
+        <h1 className="text-4xl font-bold text-opacity-80 text-white">Contact Me </h1>
         <div className="flex space-x-4">
           <a
             href="https://www.linkedin.com/in/acozy03"
