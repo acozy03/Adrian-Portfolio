@@ -52,9 +52,9 @@ const Footer = () => {
   };
 
   return (
-    <div className="flex flex-col justify-center items-left antialiased relative rounded-xl mb-20 p-10 border border-white/10" id="contact">
-      <div className="flex justify-between items-center mb-10 relative z-10">
-        <h1 className="text-4xl font-bold text-opacity-80 text-white">Contact Me </h1>
+    <div className="flex flex-col justify-center items-left antialiased relative rounded-xl mb-10 p-8 border border-white/10 bg-white/10 dark:bg-black/10" id="contact">
+      <div className="flex justify-between items-center mb-8 relative z-10">
+        <h1 className="text-4xl font-bold text-opacity-80 text-black dark:text-white">Contact Me </h1>
         <div className="flex space-x-4">
           <a
             href="https://www.linkedin.com/in/acozy03"
@@ -89,7 +89,7 @@ const Footer = () => {
               onChange={handleInputChange}
               placeholder="First Name"
               required
-              className="w-full px-4 py-2 bg-black/10 backdrop-blur-sm border border-white/20 rounded-lg focus:outline-none focus:border-white/40 peer placeholder-shown:border-white/20 text-white placeholder:text-white/60"
+              className="w-full px-4 py-2 bg-black/10 backdrop-blur-sm border border-white/20 rounded-lg focus:outline-none focus:border-white/40 peer placeholder-shown:border-white/20 text-black dark:text-white placeholder:text-black/70 dark:placeholder:text-white/70"
             />
           </div>
           <div className="col-span-1 relative">
@@ -101,7 +101,7 @@ const Footer = () => {
               onChange={handleInputChange}
               placeholder="Last Name"
               required
-              className="w-full px-4 py-2 bg-black/10 backdrop-blur-sm border border-white/20 rounded-lg focus:outline-none focus:border-white/40 peer placeholder-shown:border-white/20 text-white placeholder:text-white/60"
+              className="w-full px-4 py-2 bg-black/10 backdrop-blur-sm border border-white/20 rounded-lg focus:outline-none focus:border-white/40 peer placeholder-shown:border-white/20 text-black dark:text-white placeholder:text-black/70 dark:placeholder:text-white/70"
             />
           </div>
         </div>
@@ -116,7 +116,7 @@ const Footer = () => {
               onChange={handleInputChange}
               placeholder="Subject"
               required
-              className="w-full px-4 py-2 bg-black/10 backdrop-blur-sm border border-white/20 rounded-lg focus:outline-none focus:border-white/40 peer placeholder-shown:border-white/20 text-white placeholder:text-white/60"
+              className="w-full px-4 py-2 bg-black/10 backdrop-blur-sm border border-white/20 rounded-lg focus:outline-none focus:border-white/40 peer placeholder-shown:border-white/20 text-black dark:text-white placeholder:text-black/70 dark:placeholder:text-white/70"
             />
           </div>
           <div className="col-span-1 relative">
@@ -128,7 +128,7 @@ const Footer = () => {
               onChange={handleInputChange}
               placeholder="Email"
               required
-              className="w-full px-4 py-2 bg-black/10 backdrop-blur-sm border border-white/20 rounded-lg focus:outline-none focus:border-white/40 peer placeholder-shown:border-white/20 text-white placeholder:text-white/60"
+              className="w-full px-4 py-2 bg-black/10 backdrop-blur-sm border border-white/20 rounded-lg focus:outline-none focus:border-white/40 peer placeholder-shown:border-white/20 text-black dark:text-white placeholder:text-black/70 dark:placeholder:text-white/70"
             />
           </div>
         </div>
@@ -142,7 +142,7 @@ const Footer = () => {
             placeholder="Message"
             rows={5}
             required
-            className="w-full px-4 py-2 bg-black/10 backdrop-blur-sm border border-white/20 rounded-lg focus:outline-none focus:border-white/40 peer placeholder-shown:border-white/20 text-white placeholder:text-white/60"
+            className="w-full px-4 py-2 bg-black/10 backdrop-blur-sm border border-white/20 rounded-lg focus:outline-none focus:border-white/40 peer placeholder-shown:border-white/20 text-black dark:text-white placeholder:text-black/70 dark:placeholder:text-white/70"
           ></textarea>
         </div>
 
@@ -153,10 +153,15 @@ const Footer = () => {
           Send
         </button>
       </form>
+
+      {/* Copyright Section */}
+      <div className="mt-6 text-center text-white text-sm text-opacity-80">
+        <p>© {new Date().getFullYear()} Adrian Cosentino. All rights reserved.</p>
+      </div>
+
       <BackgroundBeams className="absolute inset-0 -z-0" />
     </div>
   );
 };
 
 export default Footer;
-

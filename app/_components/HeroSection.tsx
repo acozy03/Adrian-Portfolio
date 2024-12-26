@@ -26,7 +26,7 @@ const HeroSection = () => {
             Based In Orlando, Fl
           </p>
           <TextGenerateEffect
-            words="I'm Adrian Cosentino"
+            words=" Adrian Cosentino"
             className="text-[40px] md:text-6xl lg:text-7xl font-bold text-center max-w-5xl leading-snug tracking-wide"
           />
           <p className="pt-5 pb-8 text-sm sm:text-base md:text-lg text-dark-200 dark:text-stone-200/70">
