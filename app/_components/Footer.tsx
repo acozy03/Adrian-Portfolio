@@ -24,7 +24,7 @@ const Footer = () => {
     e.preventDefault();
     console.log("Form submitted with data:", formData);
 
-    fetch("http://localhost:3000/api/contact", {
+    fetch("api/contact", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
