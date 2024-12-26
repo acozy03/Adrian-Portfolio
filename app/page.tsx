@@ -13,7 +13,7 @@ import Footer from "@/app/_components/Footer";
 const navItems = [
   { name: "Home", link: "#home", icon: <House /> },
   { name: "About", link: "#about", icon: <BriefcaseBusiness /> },
-  { name: "Work", link: "#work", icon: <UserRound /> },
+  { name: "Projects", link: "#work", icon: <UserRound /> },
   { name: "Contact", link: "#contact", icon: <ContactIco /> },
 ];
 
