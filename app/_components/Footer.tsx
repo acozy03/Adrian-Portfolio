@@ -57,7 +57,7 @@ const Footer = () => {
         <h1 className="text-4xl font-bold text-white">Contact Me</h1>
         <div className="flex space-x-4">
           <a
-            href="https://www.linkedin.com/in/your-linkedin-profile"
+            href="https://www.linkedin.com/in/acozy03"
             target="_blank"
             rel="noopener noreferrer"
             className="w-10 h-10 bg-gray-500/10 rounded-full flex items-center justify-center hover:bg-gray-500/20 transition-colors"
@@ -66,8 +66,8 @@ const Footer = () => {
           </a>
           <button
             onClick={() => {
-              navigator.clipboard.writeText('your.email@example.com').then(() => {
-                alert('Email copied to clipboard!');
+              navigator.clipboard.writeText('acozy03@gmail.com').then(() => {
+                alert('Email copied to clipboard! Feel free to reach out :)');
               }).catch(err => {
                 console.error('Failed to copy email: ', err);
               });
