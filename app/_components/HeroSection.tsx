@@ -1,5 +1,5 @@
 "use client";
-import { ChevronRight, Download, Linkedin, GitlabIcon as GitHub, Mail } from 'lucide-react';
+import { ChevronRight, Download, Linkedin, Github, Mail } from 'lucide-react';
 import ShinyButton from "./ui/ShinyButton";
 import Link from "next/link";
 import { TextGenerateEffect } from "./ui/TextGenerate";
@@ -62,7 +62,7 @@ const HeroSection = () => {
               rel="noopener noreferrer"
               className="w-12 h-12 bg-gray-500/10 rounded-full flex items-center justify-center hover:bg-gray-500/20 transition-colors"
             >
-              <GitHub size={24} className="" />
+              <Github size={24} className="" />
             </a>
             <button
               onClick={handleEmailClick}
