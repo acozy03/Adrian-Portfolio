@@ -43,7 +43,7 @@ const HeroSection = () => {
             >
               <Download className="text-primary" />
               <span className="group-hover:text-white/70 transition-colors duration-200 font-semibold">
-                Download Resume
+               Resume
               </span>
             </a>
           </div>
