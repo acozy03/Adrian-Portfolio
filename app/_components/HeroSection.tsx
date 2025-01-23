@@ -37,13 +37,13 @@ const HeroSection = () => {
               <Link href="#work">See My Work</Link>
             </ShinyButton>
             <a
-              href="/resume/CV_en.pdf"
+              href="/resume/adrian_cosentino.pdf"
               download
               className="flex items-center gap-2.5 group"
             >
               <Download className="text-primary" />
               <span className="group-hover:text-white/70 transition-colors duration-200 font-semibold">
-                Download CV
+                Download Resume
               </span>
             </a>
           </div>
