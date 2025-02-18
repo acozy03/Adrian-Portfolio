@@ -65,20 +65,27 @@ const Skills = () => {
       {/* Category Filters */}
       <div className="flex flex-wrap gap-3 mb-6 justify-left">
   {categories.map((category) => (
-    <button
+    <motion.button
       key={category}
       onClick={() => setSelectedCategory(category)}
-      className={`px-4 py-2 rounded-lg text-sm font-medium  bg-dark-300 text-white ${
-        selectedCategory === category
-          ? "border border-dark-700" // Faint border for the selected button
-          : ""
-      }`}
+      initial={{ opacity: 0, y: 20 }} // Start hidden and slightly below
+      whileInView={{ opacity: 1, y: 0 }} // Animate into view
+      viewport={{ once: true }} // Trigger animation only once
+      transition={{ duration: 0.5, delay: 0.1 * categories.indexOf(category) }} // Staggered delay
+      whileHover={{
+        backgroundColor: "#ec4b4b", // Change background color on hover
+        scale: 1.05, // Optional: Slightly scale up the button on hover
+      }}
+      style={{
+        backgroundColor:
+          selectedCategory === category ? "#ec4b4b" : "#1f1d1d", // Dynamic background color
+      }}
+      className="px-4 py-2 rounded-lg text-sm font-medium text-white"
     >
       {category}
-    </button>
+    </motion.button>
   ))}
 </div>
-
       {/* Filtered Tech Cards */}
       <motion.div
         initial={{ opacity: 0, y: 75 }}
