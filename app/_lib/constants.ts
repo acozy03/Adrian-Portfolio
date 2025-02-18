@@ -212,6 +212,9 @@ export const portfolioProjects = [
       "Unity",
       "C#",
       "Git",
+      "Behavior Trees",
+      "TextMeshPro",
+      "Finite State Machines"
     ],
     liveDemoUrl: "https://acozy03.itch.io/continuum",
     sourceCodeUrl: "https://github.com/Suaremente/Continuum",
@@ -235,6 +238,26 @@ export const portfolioProjects = [
     ],
     liveDemoUrl: "https://cs.ucf.edu/CyberCompetitionTeam/#/",
     sourceCodeUrl: "https://github.com/SadieNiBu/UXTeam14",
+  },
+
+  {
+    id: "AIforForeignLanguageDLPT",
+    heading: "AI for Foreign Language DLPT Generation",
+    subheading: "UCF Collaboration with The National Security Agency (NSA)",
+    description:
+      "An AI Model for DLPT Text Classification and Passage Generation, currently in progress...",
+    imageUrl: "/imgs/projects/portfolio-mockup4.png",
+    techStack: [
+      "TensorFlow",
+      "PostgreSQL",
+      "Git",
+      "OPUS Tools",
+      "Python",
+      "TextStat",
+      "Pandas & NumPy"
+    ],
+    liveDemoUrl: "",
+    sourceCodeUrl: "https://github.com/acozy03/AIDLPT-Data",
   },
 ];
 
