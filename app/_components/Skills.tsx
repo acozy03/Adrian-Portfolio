@@ -6,9 +6,9 @@ import { motion } from "framer-motion";
 
 // Array of image URLs for Adrian's pictures
 const adrianImages = [
-  "/imgs/portraits/adrian.png",
-  "/imgs/portraits/adrian2.png",
-  "/imgs/portraits/adrian3.png",
+  "/imgs/portraits/adrian.webp",
+  "/imgs/portraits/adrian2.webp",
+  "/imgs/portraits/adrian3.webp",
 ];
 
 const categories = ["Languages", "Frameworks / Libraries", "Other"];
