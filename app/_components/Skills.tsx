@@ -1,9 +1,19 @@
 "use client";
+import { useState } from "react";
 import { techCardsItems } from "../_lib/constants";
 import TechCard from "./TechCard";
 import { motion } from "framer-motion";
 
+const categories = ["Languages", "Frameworks / Libraries", "Other"];
+
 const Skills = () => {
+  const [selectedCategory, setSelectedCategory] = useState("Languages");
+
+  // Filter items based on selected category
+  const filteredItems = techCardsItems.filter((item) =>
+    selectedCategory === "All" ? true : item.category === selectedCategory
+  );
+
   return (
     <div className="relative z-10 py-4 sm:py-8" id="about">
       {/* About Me Section */}
@@ -32,7 +42,7 @@ const Skills = () => {
           className="hidden md:block w-40 h-40 sm:w-48 sm:h-48 rounded-lg overflow-hidden flex-shrink-0 ml-8 relative transition-shadow duration-300 ease-in-out"
         >
           <img
-            src="/imgs/portraits/adrian.png" // Replace with your image path
+            src="/imgs/portraits/adrian.png"
             alt="About Me"
             className="object-cover w-full h-full relative z-10 hover:blur-none hover:scale-105 transition-all duration-300 ease-in-out rounded-lg"
           />
@@ -48,10 +58,28 @@ const Skills = () => {
           transition={{ duration: 0.5, delay: 0.25 }}
           className="text-3xl min-[430px]:text-4xl md:text-5xl font-bold dark:text-stone-200"
         >
-          Current technologies
+          Current Technologies
         </motion.h1>
       </div>
 
+      {/* Category Filters */}
+      <div className="flex flex-wrap gap-3 mb-6 justify-left">
+  {categories.map((category) => (
+    <button
+      key={category}
+      onClick={() => setSelectedCategory(category)}
+      className={`px-4 py-2 rounded-lg text-sm font-medium  bg-dark-300 text-white ${
+        selectedCategory === category
+          ? "border border-dark-700" // Faint border for the selected button
+          : ""
+      }`}
+    >
+      {category}
+    </button>
+  ))}
+</div>
+
+      {/* Filtered Tech Cards */}
       <motion.div
         initial={{ opacity: 0, y: 75 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -59,7 +87,7 @@ const Skills = () => {
         transition={{ duration: 0.5, delay: 0.25 }}
         className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 items-center justify-between gap-4"
       >
-        {techCardsItems.map((cardItem) => (
+        {filteredItems.map((cardItem) => (
           <TechCard key={cardItem.name} cardInfo={cardItem} />
         ))}
       </motion.div>
