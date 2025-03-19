@@ -197,7 +197,7 @@ export const portfolioProjects = [
       "Node.js",
       "Express",
     ],
-    liveDemoUrl: "https://habittracktion.xyz/",
+    liveDemoUrl: "https://tracktion-jade.vercel.app",
     sourceCodeUrl: "https://github.com/jphillips356/digital-ocean-app",
   },
 

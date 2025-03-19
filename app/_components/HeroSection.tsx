@@ -48,6 +48,7 @@ const HeroSection = () => {
             </a>
           </div>
           <div className="flex items-center gap-4 mt-8">
+            {/* LinkedIn */}
             <a
               href="https://www.linkedin.com/in/acozy03"
               target="_blank"
@@ -55,6 +56,7 @@ const HeroSection = () => {
               className="w-12 h-12 bg-gray-500/10 rounded-full flex items-center justify-center hover:bg-gray-500/20 transition-colors"
             >
               <Linkedin size={24} className="" />
+             {/* LinkedIn Icon */}
             </a>
             <a
               href="https://github.com/acozy03"
