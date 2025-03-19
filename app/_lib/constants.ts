@@ -198,7 +198,7 @@ export const portfolioProjects = [
       "Express",
     ],
     liveDemoUrl: "https://tracktion-jade.vercel.app",
-    sourceCodeUrl: "https://github.com/jphillips356/digital-ocean-app",
+    sourceCodeUrl: "https://github.com/acozy03/Tracktion",
   },
 
   {
