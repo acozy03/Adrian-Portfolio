@@ -53,9 +53,7 @@ const Skills = () => {
             More About Me
           </h1>
           <p className="text-sm min-[430px]:text-base mt-4 text-dark-200/70 dark:text-stone-200/70">
-            Hi! I&apos;m a senior student developer at UCF who loves building efficient and
-            innovative projects. With a strong foundation in full-stack development, I enjoy creating
-            user-friendly designs, learning new frameworks and languages, and even sometimes dabbling in game development. I&apos;m always looking for new opportunities to grow and learn.
+            Hi! I&apos;m a recent UCF graduate passionate about building innovative projects and constantly exploring new frameworks, tools, and techniques in computer science. With a strong foundation in full-stack development, machine learning, automation, and game design, I enjoy designing innovative, user-friendly solutions to everyday challenges. I'm always eager to grow, learn, and apply my leadership experience to meaningful opportunities.
           </p>
         </motion.div>
 

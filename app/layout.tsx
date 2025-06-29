@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     default: "Adrian - Skilled Web Developer",
   },
   description:
-    "Adrian Cosentino, web developer. Creating intuitive, visually stunning and highly functional web applications.",
+    "Adrian Cosentino, full-stack engineer. Creating stunning and highly functional software.",
 };
 
 export default function RootLayout({
