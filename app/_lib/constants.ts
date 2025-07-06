@@ -332,7 +332,7 @@ export const techCardsItems = [
   },
   {
     name: "CUDA",
-    description: "NVIDIA GPU programming toolkit",
+    description: "NVIDIA GPU toolkit",
     category: "Tools & DevOps",
     imageUrl: "/imgs/logos/cuda.svg",
     bgColor: "bg-[#76B900]/50",
