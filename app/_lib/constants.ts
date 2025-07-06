@@ -267,7 +267,7 @@ export const techCardsItems = [
   },
   {
     name: "Supabase",
-    description: "Open-source Firebase alternative",
+    description: "Open-source backend tool",
     category: "Databases & ORMs",
     imageUrl: "/imgs/logos/supabase.svg",
     bgColor: "bg-[#3ECF8E]/60",
