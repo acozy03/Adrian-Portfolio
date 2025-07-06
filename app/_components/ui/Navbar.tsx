@@ -57,7 +57,7 @@ export const Navbar = ({
           duration: 0.2,
         }}
         className={cn(
-          "fixed top-0 left-0 right-0 w-full bg-white bg-opacity-20 dark:bg-black dark:bg-opacity-20 shadow-md z-[5000] transition-colors duration-200",
+          "fixed top-0 left-0 right-0 w-full bg-white bg-opacity-20 dark:bg-black dark:bg-opacity-10 shadow-md z-[5000] transition-colors duration-200",
           className
         )}
                 

@@ -95,17 +95,19 @@ const ProjectOverview = ({ params }: { params: { projectName: string } }) => {
                 <ProjectTechnologiesMini techStack={techStack} />
 
                 <div className="flex items-center gap-4 mt-10">
-                  <ShinyButton icon={<Globe />} iconPosition="left">
-                    <Link href={liveDemoUrl} target="_blank">
+                  {/* View Demo Button */}
+                  <Link href={liveDemoUrl} target="_blank" passHref>
+                    <ShinyButton icon={<Globe />} iconPosition="left">
                       View Demo
-                    </Link>
-                  </ShinyButton>
+                    </ShinyButton>
+                  </Link>
 
-                  <ShinyButton icon={<Code />} iconPosition="left">
-                    <Link href={sourceCodeUrl} target="_blank">
+                  {/* Source Code Button */}
+                  <Link href={sourceCodeUrl} target="_blank" passHref>
+                    <ShinyButton icon={<Code />} iconPosition="left">
                       Source Code
-                    </Link>
-                  </ShinyButton>
+                    </ShinyButton>
+                  </Link>
                 </div>
               </div>
 

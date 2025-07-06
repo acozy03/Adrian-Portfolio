@@ -29,11 +29,12 @@ const ProjectsSection = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.25 }}
         >
-          <ShinyButton icon={<ChevronRight />}>
-            <Link href="https://github.com/acozy03" target="_blank">
+          {/* Moved Link outside to wrap the ShinyButton */}
+          <Link href="https://github.com/acozy03" target="_blank" passHref>
+            <ShinyButton icon={<ChevronRight />}>
               All Projects
-            </Link>
-          </ShinyButton>
+            </ShinyButton>
+          </Link>
         </motion.div>
       </div>
 

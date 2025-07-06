@@ -32,21 +32,25 @@ const HeroSection = () => {
           <p className="pt-5 pb-8 text-sm sm:text-base md:text-lg text-dark-200 dark:text-stone-200/70">
             I create clean, intuitive software that solves real problems
           </p>
-          <div className="flex flex-col sm:flex-row items-center gap-4">
-            <ShinyButton icon={<ChevronRight />}>
-              <Link href="#work">See My Work</Link>
-            </ShinyButton>
-            <a
-              href="/resume/adrian_cosentino.pdf"
-              download
-              className="flex items-center gap-2.5 group"
-            >
-              <Download className="text-primary" />
-              <span className="group-hover:text-white/70 transition-colors duration-200 font-semibold">
-               Resume
-              </span>
-            </a>
-          </div>
+         <div className="flex flex-col sm:flex-row items-center gap-4">
+  <Link href="#work" className="w-fit">
+    <ShinyButton icon={<ChevronRight />}>
+      See My Work
+    </ShinyButton>
+  </Link>
+
+  <a
+    href="/resume/adrian_cosentino.pdf"
+    download
+    className="flex items-center gap-2.5 group"
+  >
+    <Download className="text-primary" />
+    <span className="group-hover:text-white/70 transition-colors duration-200 font-semibold">
+      Resume
+    </span>
+  </a>
+</div>
+
           <div className="flex items-center gap-4 mt-8">
             {/* LinkedIn */}
             <a

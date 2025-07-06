@@ -11,7 +11,7 @@ const adrianImages = [
   "/imgs/portraits/adrian3.webp",
 ];
 
-const categories = ["Languages", "Frameworks / Libraries", "Other"];
+const categories = ["Languages", "Frontend", "Backend & Runtime", "Machine Learning", "Databases & ORMs", "Tools & DevOps", "Cloud & Hosting"];
 
 const Skills = () => {
   const [selectedCategory, setSelectedCategory] = useState("Languages");
@@ -53,7 +53,7 @@ const Skills = () => {
             More About Me
           </h1>
           <p className="text-sm min-[430px]:text-base mt-4 text-dark-200/70 dark:text-stone-200/70">
-            Hi! I&apos;m a recent UCF graduate passionate about building innovative projects and constantly exploring new frameworks, tools, and techniques in computer science. With a strong foundation in full-stack development, machine learning, automation, and game design, I enjoy designing innovative, user-friendly solutions to everyday challenges. I'm always eager to grow, learn, and apply my leadership experience to meaningful opportunities.
+            Hi! I&apos;m a recent UCF graduate passionate about building innovative projects and constantly exploring new frameworks, tools, and techniques in computer science. With a strong foundation in full-stack development, machine learning, automation, and game design, I enjoy designing innovative, user-friendly solutions to everyday challenges. I'm always eager to grow, learn, and apply my technical expertise to meaningful opportunities.
           </p>
         </motion.div>
 
@@ -99,7 +99,7 @@ const Skills = () => {
           transition={{ duration: 0.5, delay: 0.25 }}
           className="text-3xl min-[430px]:text-4xl md:text-5xl font-bold dark:text-stone-200"
         >
-          Current Technologies
+          Technologies
         </motion.h1>
       </div>
 
