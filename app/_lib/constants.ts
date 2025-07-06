@@ -163,7 +163,7 @@ export const techCardsItems = [
   },
   {
     name: "WebSockets",
-    description: "Synced communication protocol",
+    description: "Communication protocol",
     category: "Backend & Runtime",
     imageUrl: "/imgs/logos/websockets.svg",
     bgColor: "bg-[#ffffff]/40",
@@ -194,7 +194,7 @@ export const techCardsItems = [
   },
   {
     name: "scikit-learn",
-    description: "Classical machine learning library",
+    description: "Machine learning library",
     category: "Machine Learning",
     imageUrl: "/imgs/logos/scikit-learn.svg",
     bgColor: "bg-[#F7931E]/50",
