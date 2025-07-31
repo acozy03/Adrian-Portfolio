@@ -1,5 +1,3 @@
-
-
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { EmailTemplate } from '../../app/_components/email-template';
 import { Resend } from 'resend';
