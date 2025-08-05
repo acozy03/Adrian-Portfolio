@@ -53,7 +53,7 @@ const Skills = () => {
             More About Me
           </h1>
           <p className="text-sm min-[430px]:text-base mt-4 text-dark-200/70 dark:text-stone-200/70">
-            Hi! I&apos;m a recent UCF graduate passionate about building innovative projects and constantly exploring new frameworks, tools, and techniques in computer science. With a strong foundation in full-stack development, machine learning, automation, and game design, I enjoy designing innovative, user-friendly solutions to everyday challenges. I'm always eager to grow, learn, and apply my technical expertise to meaningful opportunities.
+            Hi! I&apos;m a recent UCF graduate with a passion for creating innovative, scalable and meaningful systems. I have a strong foundation in full-stack development, machine learning, automation, and game design, and I’m always exploring new frameworks, tools, and technologies to stay at the forefront of computer science. I thrive on solving real-world problems with practical, elegant solutions and am eager to grow, learn, and apply my skills to impactful opportunities.
           </p>
         </motion.div>
 
